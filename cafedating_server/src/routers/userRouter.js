@@ -1,0 +1,28 @@
+const Router = require('express')
+const { login, register, getActivities, getPersons, getSelectedInterests, updateSelectedInterests, getUserInterests, searchColleges, updateCollege, getCollege, updatePhotoUrl, getPhotoUrl, changeName, pushNotification, updateFcmToken, searchUsers, getNotis, markNotiAsRead, acceptFriendRequest, updatePostion } = require('../../controllers/userController')
+
+const userRouter = Router()
+
+// userRouter.get('/get-all', getAllUsers)
+userRouter.post('/login', login)
+userRouter.post('/register', register)
+userRouter.get('/activities', getActivities)
+userRouter.get('/persons', getPersons)
+userRouter.post('/selected-interests', getSelectedInterests)
+userRouter.post('/user-interests', getUserInterests)
+
+userRouter.post('/update-selected-interests', updateSelectedInterests)
+userRouter.get('/search-colleges', searchColleges)
+userRouter.post('/update-college', updateCollege)
+userRouter.post('/update-photo-url', updatePhotoUrl)
+userRouter.post('/photo-url', getPhotoUrl)
+userRouter.post('/college', getCollege)
+userRouter.post('/change-name', changeName)
+userRouter.post('/push-notification', pushNotification)
+userRouter.post('/update-fcm-token', updateFcmToken)
+userRouter.post('/search-users', searchUsers)
+userRouter.post('/notis', getNotis)
+userRouter.post('/mark-noti-as-read', markNotiAsRead)
+userRouter.post('/accept-friend-request', acceptFriendRequest)
+userRouter.post('/update-position', updatePostion)
+module.exports=userRouter
